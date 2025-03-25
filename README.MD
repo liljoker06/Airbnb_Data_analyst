@@ -39,6 +39,7 @@ Deux fichiers principaux sont utilisés :
 │── 📄 main.py            # Point d'entrée du projet
 │── 📄 requirements.txt    # Dépendances du projet
 │── 📄 README.md          # Documentation du projet
+│── 📁 venv/              # Environnement virtuel Python
 ```
 
 ### 🔍 Sélection des variables clés
@@ -75,15 +76,27 @@ Le projet inclut plusieurs analyses :
 - **Analyse des quartiers (`quartier.py`)** : Comparaison des quartiers les plus chers et les plus prisés.
 
 ## 🚀 Exécution du Projet
-1. **Installation des dépendances** :
+1. **Création de l'environnement virtuel** :
+   ```sh
+   python -m venv venv
+   ```
+2. **Activation de l'environnement virtuel** :
+   ```sh
+   # Sous Windows
+   venv\Scripts\activate
+   
+   # Sous macOS/Linux
+   source venv/bin/activate
+   ```
+3. **Installation des dépendances** :
    ```sh
    pip install -r requirements.txt
    ```
-2. **Exécution du script de fusion des données** :
+4. **Exécution du script de fusion des données** :
    ```sh
    python fusion.py
    ```
-3. **Exécution des analyses via `main.py`** :
+5. **Exécution des analyses via `main.py`** :
    ```sh
    python main.py
    ```
@@ -92,6 +105,4 @@ Le projet inclut plusieurs analyses :
 - Une meilleure compréhension des **facteurs qui influencent le prix** d’un logement Airbnb.
 - Une **analyse approfondie de la disponibilité et des tendances des quartiers**.
 - Un modèle permettant de **prédire le prix optimal** pour un nouveau bien.
-
-
 

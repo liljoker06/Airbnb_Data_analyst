@@ -1,0 +1,27 @@
+# Ignorer l'environnement virtuel
+venv/
+
+# Ignorer les fichiers de cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorer les fichiers CSV volumineux
+csv-data/*.csv
+
+# Ignorer les dépendances installées
+*.log
+.DS_Store
+
+
+# Ignorer les fichiers dans csv data
+!csv-data/
+
+# Ignorer les fichiers de données volumineux
+data/*.parquet
+
+# Ignorer les fichiers de données volumineux
+
+
+
+

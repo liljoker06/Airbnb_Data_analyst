@@ -21,6 +21,26 @@ Deux fichiers principaux sont utilisés :
 - **`listings.csv`** : Contient les informations détaillées des logements.
 - **`calendar.csv`** : Contient les disponibilités et variations de prix des logements au fil du temps.
 
+### 📂 Structure du projet
+```
+📁 Airbnb_data_analyst/
+│── 📁 csv-data/           # Contient les fichiers CSV et Parquet fusionnés
+│   │── 📄 airbnb_filtered.parquet  # Fichier fusionné des données
+│   │── 📄 calender.csv     # Données de disponibilité des logements
+│   │── 📄 listings.csv     # Données des logements Airbnb
+│
+│── 📁 analyses/           # Contient les différents types d'analyses
+│   │── 📄 prix.py         # Analyse des prix
+│   │── 📄 disponibilite.py # Analyse de la disponibilité
+│   │── 📄 quartier.py     # Analyse des quartiers
+│   │── 📄 __init__.py      # Permet d'importer les analyses comme un package
+│
+│── 📄 fusion.py          # Script de fusion des données
+│── 📄 main.py            # Point d'entrée du projet
+│── 📄 requirements.txt    # Dépendances du projet
+│── 📄 README.md          # Documentation du projet
+```
+
 ### 🔍 Sélection des variables clés
 Nous avons retenu les colonnes suivantes :
 #### 🔹 `listings.csv`
@@ -48,8 +68,11 @@ Nous avons retenu les colonnes suivantes :
 3. **Suppression des valeurs nulles et des doublons** pour assurer la fiabilité des résultats.
 4. **Analyse statistique et visualisation** des données pour identifier les facteurs influençant les prix.
 
-### 📈 Modèle de Prédiction
-Une fois les données nettoyées et consolidées, nous appliquerons des modèles de **Machine Learning** pour prédire le prix optimal d'un logement en fonction de ses caractéristiques.
+### 📈 Analyses effectuées
+Le projet inclut plusieurs analyses :
+- **Analyse des prix (`prix.py`)** : Calcul du prix moyen par type de logement et par quartier.
+- **Analyse de la disponibilité (`disponibilite.py`)** : Étude des tendances de disponibilité et taux d’occupation.
+- **Analyse des quartiers (`quartier.py`)** : Comparaison des quartiers les plus chers et les plus prisés.
 
 ## 🚀 Exécution du Projet
 1. **Installation des dépendances** :
@@ -60,13 +83,14 @@ Une fois les données nettoyées et consolidées, nous appliquerons des modèles
    ```sh
    python fusion.py
    ```
-3. **Exploration et analyse des données** :
+3. **Exécution des analyses via `main.py`** :
    ```sh
-   python analyse.py
+   python main.py
    ```
 
 ## 📌 Résultats Attendus
 - Une meilleure compréhension des **facteurs qui influencent le prix** d’un logement Airbnb.
+- Une **analyse approfondie de la disponibilité et des tendances des quartiers**.
 - Un modèle permettant de **prédire le prix optimal** pour un nouveau bien.
 
 

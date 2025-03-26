@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d8897c3-b978-4033-968a-8840318a6244" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analyses/disponibilite.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyses/disponibilite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readPaquet.py" beforeDir="false" afterPath="$PROJECT_DIR$/readPaquet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <workItem from="1742977125016" duration="1297000" />
       <workItem from="1742978433903" duration="189000" />
       <workItem from="1742978630369" duration="39000" />
-      <workItem from="1742978673512" duration="5406000" />
+      <workItem from="1742978673512" duration="6026000" />
     </task>
     <servers />
   </component>
@@ -79,6 +79,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Airbnb_Data_analyst$quartier.coverage" NAME="quartier Coverage Results" MODIFIED="1742980516754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analyses" />
     <SUITE FILE_PATH="coverage/Airbnb_Data_analyst$readPaquet.coverage" NAME="readPaquet Coverage Results" MODIFIED="1742977722028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Airbnb_Data_analyst$main.coverage" NAME="main Coverage Results" MODIFIED="1742983192880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Airbnb_Data_analyst$main.coverage" NAME="main Coverage Results" MODIFIED="1742984433075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

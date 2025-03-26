@@ -9,7 +9,7 @@ df = pd.read_parquet("./csv-data/airbnb_filtered.parquet")
 
 # Execution les analystes
 analyse_disponibilite(df)
-# analyse_prix.analyse_prix(df)
-# analyse_quartier.analyse_quartier(df)
+analyse_prix.analyse_prix(df)
+analyse_quartier.analyse_quartier(df)
 
-# visualiser_boxplot_avec_valeurs(df, "price")
+visualiser_boxplot_avec_valeurs(df, "price")

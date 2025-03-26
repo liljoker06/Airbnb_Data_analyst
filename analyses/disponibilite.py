@@ -64,7 +64,3 @@ def analyse_disponibilite(df):
     plt.xlabel('Jours de disponibilité')
     plt.ylabel('Nom du logement')
     plt.show()
-
-# Exemple d'appel de la fonction
-# df = pd.read_csv("path_to_your_file/listings.csv")
-# analyse_disponibilite(df)

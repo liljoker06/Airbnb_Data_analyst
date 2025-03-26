@@ -11,5 +11,5 @@ df = pd.read_parquet("./csv-data/airbnb_filtered.parquet")
 
 # Execution les analystes 
 analyse_prix.analyse_prix(df)
-analyse_quartier.analyse_quartier(df)
+# analyse_quartier.analyse_quartier(df)
 

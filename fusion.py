@@ -4,7 +4,7 @@ import dask.dataframe as dd
 
 
 data_folder = "./csv-data"
-listing_file = os.path.join(data_folder, "listings.csv")
+listing_file = os.path.join(data_folder, "listing.csv")
 calendar_file = os.path.join(data_folder, "calender.csv")  # Vérifie l'orthographe !
 output_file = os.path.join(data_folder, "airbnb_filtered.parquet")  # Format rapide
 

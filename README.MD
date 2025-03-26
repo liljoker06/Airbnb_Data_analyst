@@ -33,7 +33,7 @@ Deux fichiers principaux sont utilisés :
 │   │── 📄 disponibilite.py # Analyse de la disponibilité
 │   │── 📄 prix.py         # Analyse des prix
 │   │── 📄 quartier.py     # Analyse des quartiers
-│   │── 📄 valeurs_aberrantes.py     # Analyse des quartiers
+│   │── 📄 valeurs_aberrantes.py  # Détection des valeurs aberrantes 
 │   │── 📄 __init__.py      # Permet d'importer les analyses comme un package
 │
 │── 📄 fusion.py          # Script de fusion des données

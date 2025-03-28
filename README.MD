@@ -18,7 +18,7 @@ Les données utilisées proviennent de **[Inside Airbnb](https://insideairbnb.co
 - Placez-les dans le dossier `csv-data`.
 
 Deux fichiers principaux sont utilisés :
-- **`listings.csv`** : Contient les informations détaillées des logements.
+- **`listing.csv`** : Contient les informations détaillées des logements.
 - **`calendar.csv`** : Contient les disponibilités et variations de prix des logements au fil du temps.
 
 ### 📂 Structure du projet
@@ -27,12 +27,13 @@ Deux fichiers principaux sont utilisés :
 │── 📁 csv-data/           # Contient les fichiers CSV et Parquet fusionnés
 │   │── 📄 airbnb_filtered.parquet  # Fichier fusionné des données
 │   │── 📄 calender.csv     # Données de disponibilité des logements
-│   │── 📄 listings.csv     # Données des logements Airbnb
+│   │── 📄 listing.csv     # Données des logements Airbnb
 │
 │── 📁 analyses/           # Contient les différents types d'analyses
-│   │── 📄 prix.py         # Analyse des prix
 │   │── 📄 disponibilite.py # Analyse de la disponibilité
+│   │── 📄 prix.py         # Analyse des prix
 │   │── 📄 quartier.py     # Analyse des quartiers
+│   │── 📄 valeurs_aberrantes.py  # Détection des valeurs aberrantes 
 │   │── 📄 __init__.py      # Permet d'importer les analyses comme un package
 │
 │── 📄 fusion.py          # Script de fusion des données
@@ -44,7 +45,7 @@ Deux fichiers principaux sont utilisés :
 
 ### 🔍 Sélection des variables clés
 Nous avons retenu les colonnes suivantes :
-#### 🔹 `listings.csv`
+#### 🔹 `listing.csv`
 - `id` : Identifiant unique du logement
 - `name` : Nom du logement
 - `host_id` : Identifiant du propriétaire
@@ -74,6 +75,8 @@ Le projet inclut plusieurs analyses :
 - **Analyse des prix (`prix.py`)** : Calcul du prix moyen par type de logement et par quartier.
 - **Analyse de la disponibilité (`disponibilite.py`)** : Étude des tendances de disponibilité et taux d’occupation.
 - **Analyse des quartiers (`quartier.py`)** : Comparaison des quartiers les plus chers et les plus prisés.
+- **Détection des valeurs aberrantes (`valeurs_aberrantes.py`)** : Identification des données incohérentes ou extrêmes.
+
 
 ## 🚀 Exécution du Projet
 1. **Création de l'environnement virtuel** :

@@ -2,13 +2,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 def visualiser_boxplot_avec_valeurs(df, colonne):
-    # 🔹 Nettoyage : suppression des symboles "$" et conversion en float
-    if colonne == 'price':
-        if df['price'].dtype == 'object':
-            print("🔄 Nettoyage des valeurs de la colonne price...")
-            df['price'] = df['price'].str.replace('[\$,]', '', regex=True).astype(float)
+    """ Affiche un boxplot de la colonne spécifiée avec annotations optimisées. """
 
-    # 📊 Création du boxplot vertical
+    # 🔹 Nettoyage : suppression des symboles "$" et conversion en float
+    if colonne == 'price' and df['price'].dtype == 'object':
+        print("🔄 Nettoyage des valeurs de la colonne price...")
+        df = df.copy()  # Éviter de modifier le DataFrame original
+        df['price'] = df['price'].str.replace('[\$,]', '', regex=True).astype(float)
+
+    # 📊 Création du boxplot
     print("📊 Création du graphique boxplot...")
     plt.figure(figsize=(6, 8))
     ax = sns.boxplot(y=df[colonne])
@@ -21,13 +23,17 @@ def visualiser_boxplot_avec_valeurs(df, colonne):
     IQR = Q3 - Q1
     outliers = df[(df[colonne] < (Q1 - 1.5 * IQR)) | (df[colonne] > (Q3 + 1.5 * IQR))]
 
-    # Ajouter des annotations pour les quartiles (version verticale)
-    ax.text(Q1, 0.05, f'Q1: {Q1:.2f}', horizontalalignment='center', verticalalignment='bottom', color='blue')
-    ax.text(Q3, 0.05, f'Q3: {Q3:.2f}', horizontalalignment='center', verticalalignment='bottom', color='blue')
-    ax.text(median, 0.05, f'Médiane: {median:.2f}', horizontalalignment='center', verticalalignment='bottom', color='blue')
+    # Ajouter des annotations pour les quartiles
+    ax.annotate(f'Q1: {Q1:.2f}', xy=(0, Q1), xytext=(-0.3, Q1),
+                textcoords='offset points', ha='center', color='blue', fontsize=10)
+    ax.annotate(f'Q3: {Q3:.2f}', xy=(0, Q3), xytext=(-0.3, Q3),
+                textcoords='offset points', ha='center', color='blue', fontsize=10)
+    ax.annotate(f'Médiane: {median:.2f}', xy=(0, median), xytext=(-0.3, median),
+                textcoords='offset points', ha='center', color='blue', fontsize=10)
 
-    # Afficher les valeurs aberrantes (outliers) verticalement
-    for i in outliers[colonne]:
-        ax.text(i, 0.05, f'{i:.2f}', horizontalalignment='center', verticalalignment='bottom', color='red')
+    # Affichage limité des outliers (max 10 pour éviter surcharge)
+    for i, val in enumerate(outliers[colonne].head(10)):
+        ax.annotate(f'{val:.2f}', xy=(0, val), xytext=(0.1, val),
+                    textcoords='offset points', ha='left', color='red', fontsize=9)
 
     plt.show()
